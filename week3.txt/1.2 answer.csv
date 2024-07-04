@@ -1,0 +1,18 @@
+"# 1.2. Average Expense per Category: Now, let's see the average cost for each category. ",
+# Write a query to find the average expense amount for each category. ,
+# Hint: Use GROUP BY category and AVG(amount).,
+,
+-- USE expense_tracker;,
+-- SELECT* FROM expenses;,
+"SELECT category,ROUND(AVG(amount),2) AS Total_expense_per_month",
+FROM expenses,
+"WHERE category IN ('Groceries','Entertainment','Transportation','Dining','Clothing','Bills','Others','Travel')",
+GROUP BY category;,
+,
+category,Total_expense_per_month
+Groceries,27.88
+Entertainment,28.75
+Transportation,5
+Clothing,15.99
+Bills,75.4
+Travel,350
