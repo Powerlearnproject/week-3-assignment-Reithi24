@@ -1,0 +1,19 @@
+# 1.1. Total Spent per Category: Write a query to find the total amount you spent in each category ,
+"# (Groceries, Entertainment, etc.). Hint: Use GROUP BY category and SUM(amount).",
+,
+-- USE expense_tracker;,
+-- SELECT* FROM expenses;,
+"SELECT category,SUM(amount) AS Total_expense_per_month",
+FROM expenses,
+"WHERE category IN ('Groceries','Entertainment','Transportation','Dining Out','Clothing','Bills','Other','Travel')",
+GROUP BY category;,
+,
+category,Total_expense_per_month
+Groceries,55.75
+Entertainment,57.5
+Transportation,5
+Dining Out,30
+Clothing,15.99
+Bills,75.4
+Other,22
+Travel,350

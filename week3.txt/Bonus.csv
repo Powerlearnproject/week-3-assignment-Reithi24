@@ -1,0 +1,15 @@
+#Top 3  categories where you spend the most.,
+,
+-- USE expense_tracker;,
+-- SELECT* FROM expenses;,
+"SELECT category,SUM(amount) AS Grand_Total",
+FROM expenses,
+"WHERE category IN('Groceries','Entertainment','Transportation','Dining Out','Clothing','Bills','Other','Travel')",
+GROUP BY category,
+ORDER BY Grand_Total DESC,
+limit 3;,
+,
+category,Grand_Total
+Travel,350
+Bills,75.4
+Entertainment,57.5

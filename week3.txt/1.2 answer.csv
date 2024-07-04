@@ -1,0 +1,19 @@
+# Write a query to find the average expense amount for each category. ,
+#Hint: Use GROUP BY category and AVG(amount).,
+,
+-- USE expense_tracker;,
+-- SELECT* FROM expenses;,
+"SELECT category,ROUND(AVG(amount),2) AS Average_Totals",
+FROM expenses,
+"WHERE category IN ('Groceries','Entertainment','Transportation','Dining Out','Clothing','Bills','Other','Travel')",
+GROUP BY category;,
+,
+category,Average_Totals
+Groceries,27.88
+Entertainment,28.75
+Transportation,5
+Dining Out,30
+Clothing,15.99
+Bills,75.4
+Other,22
+Travel,350
